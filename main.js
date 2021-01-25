@@ -91,7 +91,7 @@ module.exports = ".nav-item:not(:first-child) {\n    margin-left: 10px\n  }\n  \
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <h2 class=\"text-center p-1\">{{title}}</h2>\n  <nav class=\"navbar navbar-expand-sm bg-default\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a routerLink=\"add\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">Create recipe</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"recipe\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">View all recipe</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"ingredients\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">View all ingredients</a>\n      </li>\n      <li class=\"nav-item\">\n        <button (click)=\"logout($event)\" class=\"btn btn-warning\" role=\"button\" >Logout</button>\n      </li>\n    </ul>\n  </nav>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <h2 class=\"text-center p-1\">{{title}}</h2>\n  <nav class=\"navbar navbar-expand-sm bg-default\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a routerLink=\"add\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">Create recipe</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"recipe\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">View all recipe</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"ingredients\" class=\"btn btn-primary active\" role=\"button\" routerLinkActive=\"active\">View all ingredients</a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"login\" class=\"btn btn-success\" role=\"button\" routerLinkActive=\"active\">Login</a>\n      </li>\n      <li class=\"nav-item\">\n        <button (click)=\"logout($event)\" class=\"btn btn-warning\" role=\"button\" >Logout</button>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"register\" class=\"btn btn-success\" role=\"button\" routerLinkActive=\"active\">Register</a>\n      </li>\n    </ul>\n  </nav>\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -126,6 +126,7 @@ var AppComponent = /** @class */ (function () {
             this.showMenu = false;
         }
         this.router.onSameUrlNavigation = 'reload';
+        alert("Important Info: Please click on Login button and use Username=ranjan and Password=ranjan OR click on Register button for new account");
     };
     AppComponent.prototype.logout = function (event) {
         localStorage.clear();
